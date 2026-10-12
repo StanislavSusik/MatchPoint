@@ -20,4 +20,16 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    files: ['cypress/**/*.js', '**/*.cy.{js,jsx}'],
+    languageOptions: {
+      globals: { ...globals.mocha, cy: 'readonly', Cypress: 'readonly' },
+    },
+  },
+  {
+    files: ['cypress.config.js', 'vite.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ]);
