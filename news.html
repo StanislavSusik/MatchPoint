@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Новини — MatchPoint</title>
+<link rel="stylesheet" href="/HEADER/news.css">
+
+
+<script src="/HEADER/news.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="wrap top">
+    <div class="left">
+      <a class="logo" href="index.html">Match<span>Point</span></a>
+      <nav>
+        <a href="index.html">Головна</a><a class="on" href="news.html">Новини</a><a href="matches.html">Матчі та турніри</a><a href="videos.html">Відео та Фото</a><a href="tv.html">Футбол на ТБ</a><a href="discussions.html">Обговорення</a>
+      </nav>
+    </div>
+    <div class="right">
+      <button class="theme" id="theme" type="button">Темна тема</button>
+      <div class="links"><a href="login.html">Увійти</a><a href="register.html">Реєстрація</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <!-- Ліворуч: таблиця АПЛ -->
+  <aside class="card">
+    <h2>Англійська Прем'єр-ліга</h2>
+    <table>
+      <thead><tr><th>#</th><th>Команда</th><th>І</th><th>В</th><th>Н</th><th>П</th><th>О</th></tr></thead>
+      <tbody id="tbl"></tbody>
+    </table>
+    <div class="legend"><span><i style="background:var(--gold)"></i>Ліга чемпіонів</span><span><i style="background:#c0392b"></i>Вильот</span></div>
+  </aside>
+
+  <!-- Центр: новини -->
+  <main>
+    <h1 class="title">Новини українського та світового футболу<small id="picked">Сьогодні</small></h1>
+
+    <!-- Щоб додати фото: style="background-image:url('photo.jpg')" -->
+    <article class="hero" style="background-image:url('/foto/589228.jpg')">
+      <div class="txt">
+        <div class="d" styl>30 вересня 2026, 18:59</div>
+        <h3>Долю півфіналу Кубка Перської затоки вирішив сліпий жереб: Оман проходить далі, залишивши Ірак за бортом</h3>
+        <p>Абсолютна рівність за всіма показниками, включно з жовтими картками, змусила організаторів турніру визначати півфіналіста у кабінетах.</p>
+      </div>
+    </article>
+    
+
+    <div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 1.jpg')"></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 19:17</span>
+      <span>Інше</span>
+    </div>
+    <h4>Футбольна асоціація звинуватила Арбелоа у неправомірних діях через критику суддів</h4>
+    <p>Іспанський фахівець заявив, що арбітри не дозволять Манчестер Юнайтед програти, після того як команда Карріка вирвала нічию на останніх хвилинах матчу.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 2.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 18:28</span>
+      <span>Інше</span>
+    </div>
+    <h4>Ван Гекке травмувався в матчі за збірну та повертається до Тоттенгема</h4>
+    <p>52-мільйонний новачок шпор зазнав пошкодження ноги у грі проти Сербії.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 3.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 17:59</span>
+      <span>Англія</span>
+    </div>
+    <h4>Смоллінг близький до підписання контракту з Порту</h4>
+    <p>36-річний англійський ветеран веде активні переговори з лідером чемпіонату Португалії після того, як влітку залишив Саудівську Аравію.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 4.png')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 17:55</span>
+      <span>Португалія</span>
+    </div>
+   <h4>Президента Ботева Філіпова застрелили після матчу збірної Болгарії</h4>
+    <p>53-річний бізнесмен загинув уночі у Пловдиві, правоохоронці розглядають усі можливі версії вбивства.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 6.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 17:24</span>
+      <span>Інше</span>
+    </div>
+<h4>Бордо уникне ліквідації: французький клуб отримав нового власника</h4>
+    <p>Англійський інвестиційний фонд Park Bench придбав клуб за символічний 1 євро та погодився на реструктуризацію його боргів.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 7.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 17:18</span>
+      <span>Франція</span>
+    </div>
+  <h4>Хорватія зіграє з Англією за порожніх трибун, але УЄФА зробив виняток для 100 британських фанатів</h4>
+    <p>Через санкції проти хорватських уболівальників матч Ліги націй у Рієці пройде без місцевої публіки, проте делегація прихильників Трьох левів отримала право підтримати команду Томаса Тухеля.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 8.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 17:00</span>
+      <span>Інше</span>
+    </div>
+    <h4>Стало відомо, скільки Довбик заробляє в Болоньї</h4>
+    <p>Український форвард увійшов до трійки найбільш високооплачуваних футболістів італійського клубу після переходу на правах оренди з Роми.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 9.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 16:54</span>
+      <span>Італія</span>
+    </div>
+     <h4>Гвардіола виступив із палкою заявою після визнання Манчестер Сіті винним у фінансових махінаціях</h4>
+    <p>Колишній тренер містян висловив беззаперечну підтримку клубу, новому штабу та фанатам на тлі можливого позбавлення титулів і підготовки апеляції.</p>
+  </div>
+</div>
+
+<div class="item">
+  <div class="thumb" style="background-image:url('/foto/novina 10.jpg')" ></div>
+  <div>
+    <div class="meta">
+      <span>30 вересня 2026, 16:45</span>
+      <span>Англія</span>
+    </div>
+    <h4>Шахтар зіграє з Кривбасом під час міжнародної перерви</h4>
+    <p>Команди вирішили розім’ятись перед відновленням УПЛ.</p>
+  </div>
+</div>
+  </main>
+
+  <!-- Праворуч: календар -->
+  <aside class="card">
+    <div class="cal-head">
+      <h2 id="monthTitle"></h2>
+      <div><button id="prev" type="button">‹</button><button id="next" type="button">›</button></div>
+    </div>
+    <div class="grid" id="cal"></div>
+    <button class="today-btn" id="todayBtn" type="button">Сьогодні</button>
+  </aside>
+</div>
+
+<script src="news.js"></script>
+</body>
+</html>

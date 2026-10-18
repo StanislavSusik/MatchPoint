@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Матчі та турніри — MatchPoint</title>
+<link rel="stylesheet" href="/HEADER/matches.css">
+<script src="/HEADER/matches.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap top">
+    <div class="left">
+      <a class="logo" href="index.html">Match<span>Point</span></a>
+      <nav>
+        <a href="index.html">Головна</a>
+        <a href="news.html">Новини</a>
+        <a class="on" href="matches.html">Матчі та турніри</a>
+        <a href="videos.html">Відео та Фото</a>
+        <a href="tv.html">Футбол на ТБ</a>
+        <a href="discussions.html">Обговорення</a>
+      </nav>
+    </div>
+    <div class="right">
+      <button class="theme" id="theme" type="button">Темна тема</button>
+      <div class="links"><a href="login.html">Увійти</a><a href="register.html">Реєстрація</a></div>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- Центр: розклад і результати -->
+  <main>
+    <h1 class="title">Розклад та результати матчів<small id="dateTitle"></small></h1>
+
+    <div class="filters">
+      <label class="field">
+        <span>Турнір</span>
+        <select id="tournament"></select>
+      </label>
+      <div class="datebar">
+        <button id="prevDay" type="button" aria-label="Попередній день">‹</button>
+        <input id="datePick" type="date" aria-label="Обрати дату">
+        <button id="nextDay" type="button" aria-label="Наступний день">›</button>
+        <button id="todayBtn" type="button" class="today-btn">Сьогодні</button>
+      </div>
+    </div>
+
+    <div id="matches"></div>
+  </main>
+
+  <!-- Праворуч: стрічка новин -->
+  <aside class="card">
+    <h2>Стрічка новин</h2>
+    <ul class="feed" id="feed"></ul>
+  </aside>
+
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-cols">
+      <div><h5>Україна</h5><a href="#">Прем'єр-ліга</a><a href="#">Перша ліга</a><a href="#">Друга ліга</a></div>
+      <div><h5>Європа</h5><a href="#">Англія</a><a href="#">Іспанія</a><a href="#">Італія</a><a href="#">Німеччина</a><a href="#">Франція</a></div>
+      <div><h5>Єврокубки</h5><a href="#">Ліга чемпіонів</a><a href="#">Ліга Європи</a><a href="#">Ліга конференцій</a></div>
+      <div><h5>Різне</h5><a href="#">Прогнози</a><a href="#">Футбол на ТБ</a><a href="#">Наші відео</a></div>
+      <div><h5>Інфо</h5><a href="#">Контакти</a><a href="#">Редакція</a><a href="#">Правила користування</a></div>
+    </div>
+    <p class="copy">© 2026 MatchPoint. Усі права захищено.</p>
+  </div>
+</footer>
+
+</body>
+</html>
