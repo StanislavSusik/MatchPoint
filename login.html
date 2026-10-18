@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вхід на сайт — MatchPoint</title>
+<link rel="stylesheet" href="/HEADER/login.css">
+<script src="/HEADER/login.js" defer></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap top">
+    <div class="left">
+      <a class="logo" href="index.html">Match<span>Point</span></a>
+      <nav>
+        <a href="index.html">Головна</a>
+        <a href="news.html">Новини</a>
+        <a href="matches.html">Матчі та турніри</a>
+        <a href="videos.html">Відео та Фото</a>
+        <a href="tv.html">Футбол на ТБ</a>
+        <a href="discussions.html">Обговорення</a>
+      </nav>
+    </div>
+    <div class="right">
+      <button class="theme" id="theme" type="button">Темна тема</button>
+      <div class="links"><a href="login.html">Увійти</a><a href="register.html">Реєстрація</a></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <form class="card" id="form" novalidate>
+    <h1>Вхід на сайт</h1>
+
+    <label for="email">E-mail:</label>
+    <input id="email" type="email" placeholder="Вкажіть E-mail" autocomplete="email">
+
+    <label for="pass">Пароль:</label>
+    <input id="pass" type="password" placeholder="Вкажіть пароль" autocomplete="current-password">
+
+    <label for="answer">Введіть символи з картинки:</label>
+    <div class="captcha">
+      <canvas id="captcha" width="180" height="56" role="img" aria-label="Капча: зображення з символами"></canvas>
+      <button type="button" id="refresh" title="Показати інші символи" aria-label="Оновити капчу">⟳</button>
+    </div>
+    <input id="answer" type="text" placeholder="Символи з картинки" autocomplete="off" autocapitalize="characters" maxlength="5">
+
+    <div class="err" id="err" role="alert" aria-live="polite"></div>
+    <button class="btn" id="submit" type="submit">Вхід</button>
+  </form>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
