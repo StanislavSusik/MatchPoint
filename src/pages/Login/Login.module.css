@@ -1,0 +1,164 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 56px 20px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  min-height: calc(100vh - 92px);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 100%;
+  max-width: 450px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 24px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.card h1 {
+  margin: 8px 0 20px;
+  font-size: 26px;
+}
+
+.card label {
+  display: block;
+  font-size: 15px;
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--input, #fff);
+  color: var(--text);
+  font: inherit;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.card input:focus {
+  border-color: var(--gold, #e8a317);
+  box-shadow: 0 0 0 3px rgba(232, 163, 23, 0.25);
+}
+
+.card input.bad {
+  border-color: #c0392b;
+}
+
+.card input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.captcha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.captcha canvas {
+  width: 180px;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #f3eedd;
+  user-select: none;
+}
+
+.captcha button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--input, #fff);
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.captcha button:hover {
+  color: var(--text);
+  border-color: var(--gold, #e8a317);
+}
+
+.captcha button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.answerInput {
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+}
+
+.answerInput::placeholder {
+  letter-spacing: normal;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.err {
+  color: #c0392b;
+  font-size: 14px;
+  margin: 0 0 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.ok {
+  color: #1e7e4f;
+  font-weight: 600;
+}
+
+:global(:root[data-theme="dark"]) .ok {
+  color: #5fd39a;
+}
+
+.err a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 24px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--green, #104c3c);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background: #0c3d30;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
