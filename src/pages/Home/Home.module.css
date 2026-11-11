@@ -152,15 +152,15 @@
   color: var(--em);
 }
 
-/* Стрічка клубів розтягнута без видимого ползунка */
+
 .teams {
   background: var(--card);
   border-bottom: 1.5px solid var(--line);
-  width: 100%; /* Полоска логотипов идет от края до края */
+  width: 100%; 
 }
 
 .teamsIn {
-  max-width: 1180px; /* Сами иконки клубов отцентрированы */
+  max-width: 1180px; 
   margin: 0 auto;
   padding: 12px 20px;
   display: flex;
@@ -321,12 +321,6 @@
   display: block;
 }
 
-@media(max-width: 1000px) {
-  .page {
-    grid-template-columns: 1fr;
-  }
 
-  .center {
-    order: -1;
-  }
-}
+
+

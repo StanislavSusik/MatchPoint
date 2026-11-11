@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import styles from './Login.module.css';
+import { useAuth } from '../../hooks/useAuth';
 
 const CHARS = 'ABCDEFGHJKMNPQRSTUVWXYZ23456789';
 const LEN = 5;
-const DELAY = 5;
 
 function rnd(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -19,11 +19,16 @@ export function Login() {
   const [captchaInput, setCaptchaInput] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
 
-  const [errorMsg, setErrorMsg] = useState('');
-  const [badField, setBadField] = useState(''); // 'email' | 'pass' | 'answer' | ''
-  const [isSuccess, setIsSuccess] = useState(false);
-  const [countdown, setCountdown] = useState(DELAY);
-  const [isDisabled, setIsDisabled] = useState(false);
+  // Підключаємо наш кастомний хук авторизації
+  const {
+    login,
+    errorMsg,
+    badField,
+    isSuccess,
+    loading,
+    countdown,
+    clearError
+  } = useAuth(navigate);
 
   const drawCaptcha = useCallback(() => {
     let code = '';
@@ -91,60 +96,12 @@ export function Login() {
     drawCaptcha();
   }, [drawCaptcha]);
 
-  useEffect(() => {
-    let timer;
-    if (isSuccess && countdown > 0) {
-      timer = setInterval(() => {
-        setCountdown((prev) => prev - 1);
-      }, 1000);
-    } else if (isSuccess && countdown === 0) {
-      navigate('/');
-    }
-    return () => clearInterval(timer);
-  }, [isSuccess, countdown, navigate]);
-
-  const clearError = () => {
-    setErrorMsg('');
-    setBadField('');
-  };
-
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const mail = email.trim();
-    const pwd = password;
-    const cap = captchaInput.trim().toUpperCase();
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail)) {
-      setErrorMsg('Вкажіть коректний E-mail, наприклад name@example.com.');
-      setBadField('email');
-      return;
-    }
-    if (pwd.length < 6) {
-      setErrorMsg('Пароль має містити щонайменше 6 символів.');
-      setBadField('pass');
-      return;
-    }
-    if (!cap) {
-      setErrorMsg('Введіть символи з картинки.');
-      setBadField('answer');
-      return;
-    }
-    if (cap !== captchaCode) {
-      drawCaptcha();
-      setErrorMsg('Символи введено неправильно. Спробуйте з новою картинкою.');
-      setBadField('answer');
-      return;
-    }
-
-    try {
-      localStorage.setItem('mp-user', mail);
-    } catch (x) {}
-
-    clearError();
-    setIsDisabled(true);
-    setIsSuccess(true);
+    await login({ email, password, captchaInput, captchaCode, drawCaptcha });
   };
+
+  const isDisabled = loading || isSuccess;
 
   return (
     <main className={styles.mainContainer}>
@@ -230,7 +187,7 @@ export function Login() {
         )}
 
         <button className={styles.btn} type="submit" disabled={isDisabled}>
-          Вхід
+          {loading ? 'Завантаження...' : 'Вхід'}
         </button>
       </form>
     </main>

@@ -95,6 +95,11 @@
   font-size: 18px;
 }
 
+.todayBtn:hover {
+  color: red;
+  border: red;
+}
+
 .todayBtn {
   background: none !important;
   border: 1px solid var(--green, #104c3c) !important;
@@ -103,7 +108,7 @@
   font: inherit;
   font-size: 14px;
   font-weight: 600;
-  border-radius: 999px !important;
+  border-radius: 50px !important;
   margin-left: 6px;
 }
 

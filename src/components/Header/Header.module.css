@@ -2,7 +2,7 @@
   background: var(--em, #0F4C3A);
   color: var(--em-ink, #F6F0E1);
   border-bottom: 6px solid var(--mu, #E8A317);
-  width: 100%; /* Шапка занимает всю ширину браузера */
+  width: 100%; 
 }
 
 .bar {

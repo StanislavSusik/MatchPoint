@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Home.module.css';
 
 export function Home() {
+    
   return (
     <div className={styles.homeContainer}>
       <div className={styles.teams}>
@@ -88,15 +89,20 @@ export function Home() {
 
           <div className={`${styles.col} ${styles.center}`}>
             <section className={styles.hero}>
-              <a 
-                href="#" 
+              <div 
                 className={styles.big}
                 style={{ backgroundImage: `linear-gradient(180deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.75) 100%), url('/foto/123.jpg')` }}
               >
                 <span className={styles.meta}>30.09.2026</span>
                 <h1>Футбол приплив? Розповідаємо, як в Англії щороку грають матч у річці</h1>
                 <p>Хаос і Супермен в ролі арбітра.</p>
-              </a>
+
+
+                
+                
+                
+              </div>
+
               <div className={styles.card}>
                 <h2>Головне за добу</h2>
                 <ul className={styles.feed}>
